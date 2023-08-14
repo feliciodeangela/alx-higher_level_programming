@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys, argparse
+    import sys
+    import argparse
     parser = argparse.ArgumentParser(description='A simple CLI replicator')
     parser.add_argument("prnt", nargs='*')
     ar = parser.parse_args()
