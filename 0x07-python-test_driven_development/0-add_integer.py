@@ -10,12 +10,13 @@ def add_integer(a, b=98):
         b (int): second numbber to add.
 
     Raises:
-        TypeError: If a/bb is not an integer
+        TypeError: If a/b is not an integer
+
     Returns:
         An integer result of the addition."""
-    if not isinstance(a, int):
+    if not (a != a) and (not isinstance(a, int) and not isinstance(a, float)):
         raise TypeError("a must be an integer")
-    if not isinstance(b, int):
+    if not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
     r = int(a) + int(b)
     return (int(r))
