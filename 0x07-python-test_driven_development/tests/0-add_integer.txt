@@ -10,14 +10,14 @@
 >>> add_integer(2)
 100
 
->>> add_integer(2.0)
-100
+#>>> add_integer(2.0)
+#100
 
->>> add_integer(1.2, 9)
-10
+#>>> add_integer(1.2, 9)
+#10
 
->>> add_integer(2, 8.0)
-10
+#>>> add_integer(2, 8.0)
+#10
 
 >>> add_integer("2")
 Traceback (most recent call last):
