@@ -36,4 +36,19 @@ Traceback (most recent call last):
   ...
 TypeError: div must be a number
 
+>>> mat(rix, None)
+Traceback (most recent call last):
+  ...
+TypeError: div must be a number
+
+>>> mat(None, 3)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> mat(None, None)
+Traceback (most recent call last):
+  ..
+TypeError: div must be a number
+
 """

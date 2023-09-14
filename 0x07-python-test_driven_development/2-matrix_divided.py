@@ -19,6 +19,11 @@ def matrix_divided(matrix, div):
  and all rows are not the same size,
                if div is not int|float.
            ZeroDivisionError: If div is 0."""
+    if matrix != matrix:
+        raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
+    if div != div:
+        raise TypeError("div must be a number")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
