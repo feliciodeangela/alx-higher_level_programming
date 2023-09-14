@@ -21,17 +21,22 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by 0")
-    if isinstance(matrix, list):
-        new_matrix = []
-        chk = matrix[0]
-        row = []
-        for row in range(0, len(matrix)):
-            if len(matrix[row]) == chk:
-                new_row = matrix[row].copy()
-                for data in range(0, len(matrix[row])):
-                    new_row[data] = round(new_row[data] / div, 2)
-                new_matrix.append(new_row)
-            else:
-                raise TypeError("Each row of the matrix must have the same size")
-    else:
+    if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    new_matrix = []
+    chk = len(matrix[0])
+    row = []
+    for row in range(0, len(matrix)):
+        if not isinstance(matrix[row], list):
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            break
+        if len(matrix[row]) != chk:
+            raise TypeError("Each row of the matrix must have the same size")
+        new_row = matrix[row].copy()
+        for data in range(0, len(matrix[row])):
+            if not isinstance(new_row[data], (int, float)):
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                break
+            new_row[data] = round(new_row[data] / div, 2)
+        new_matrix.append(new_row)
+    return (new_matrix)
