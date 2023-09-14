@@ -1,0 +1,21 @@
+"""
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation(3333333333)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+
+>>> text_indentation("Felício de Ângela Avelino é um gajo simples. Mas simples mesmo! Heheheheh! E você? Take care.")
+Felício de Ângela Avelino é um gajo simples.
+<BLANKLINE>
+Mas simples mesmo! Heheheheh! E você?
+<BLANKLINE>
+Take care.
+
+>>> text_indentation(2)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+
+"""
