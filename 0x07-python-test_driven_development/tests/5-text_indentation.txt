@@ -14,7 +14,7 @@ TypeError: text must be a string
 >>> t=__import__('5-text_indentation').text_indentation
 
 >>> t("Felício de Ângela Avelino É uM gajo simples. Mas simples mesmo! Heheheheh! E você? Take care.")
-FelÍcio de ângela Avelino É uM gajo simples.
+FelÍcio de Ângela Avelino É uM gajo simples.
 <BLANKLINE>
 Mas simples mesmo! Heheheheh! E você.
 <BLANKLINE>
