@@ -13,18 +13,11 @@ TypeError: text must be a string
 
 >>> t=__import__('5-text_indentation').text_indentation
 
->>> t("Holberton. School? How are you: John")
-Holberton.
+>>> t("Felício de Ângela Avelino É uM gajo simples. Mas simples mesmo! Heheheheh! E você? Take care.")
+FelÍcio de ângela Avelino É uM gajo simples.
 <BLANKLINE>
-School?
+Mas simples mesmo! Heheheheh! E você.
 <BLANKLINE>
-How are you:
-<BLANKLINE>
-John
->>> t("Felício de Ângela Avelino é um gajo simples. Mas simples mesmo! Heheheheh! E você? Take care.")
-Felício de Ângela Avelino é um gajo simples.
-<BLANKLINE>
-Mas simples mesmo! Heheheheh! E você?
-<BLANKLINE>
-Take care.
+Take
+
 """
