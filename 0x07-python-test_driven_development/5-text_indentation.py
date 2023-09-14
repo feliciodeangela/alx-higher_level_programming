@@ -13,8 +13,7 @@ def text_indentation(text):
     text = text.replace('. ', '.\n\n')
     text = text.replace(': ', ':\n\n')
     text = text.replace('? ', '?\n\n')
+    text = text.replace('.', '.\n\n')
+    text = text.replace(':', ':\n\n')
+    text = text.replace('?', '?\n\n')
     print(text, end='')
-#    for c in text:
-#        print("{}".format(c),end='')
-#       if c == '.' or c == '?' or c == ':':
-#            print("\n")
