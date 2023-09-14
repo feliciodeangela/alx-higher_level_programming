@@ -24,11 +24,13 @@ def matrix_divided(matrix, div):
     if isinstance(matrix, list):
         new_matrix = []
         chk = matrix[0]
+        row = []
         for row in range(0, len(matrix)):
-            if len(matrix[row] == chk):
-                new_row
+            if len(matrix[row]) == chk:
+                new_row = matrix[row].copy()
                 for data in range(0, len(matrix[row])):
-                    #
+                    new_row[data] = round(new_row[data] / div, 2)
+                new_matrix.append(new_row)
             else:
                 raise TypeError("Each row of the matrix must have the same size")
     else:
