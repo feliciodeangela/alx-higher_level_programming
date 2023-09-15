@@ -1,23 +1,31 @@
 """
 >>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Holberton.School")
+Holberton.
+<BLANKLINE>
+School
 
->>> text_indentation(3333333333)
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
+>>> text_indentation("Someone has to do it. School? The name i Bond: James Bond!")
+Someone has to do it.
+<BLANKLINE>
+School?
+<BLANKLINE>
+The name i Bond:
+<BLANKLINE>
+James Bond!
+
+>>> text_indentation(3)
 Traceback (most recent call last):
   ...
 TypeError: text must be a string
-
->>> text_indentation(2)
-Traceback (most recent call last):
-  ...
-TypeError: text must be a string
-
->>> t=__import__('5-text_indentation').text_indentation
-
->>> t("Felício de Ângela Avelino É um gajo simples. Mas simples mesmo! Heheheheh! E você? Take care.")
-Felício de Ângela Avelino É um gajo simples.
-<BLANKLINE>
-Mas simples mesmo! Heheheheh! E você.
-<BLANKLINE>
-Take care.
 
 """
