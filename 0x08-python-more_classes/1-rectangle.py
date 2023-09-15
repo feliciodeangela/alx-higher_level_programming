@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-    """This module contains the definition of the Rectangle class."""
+"""This module contains the definition of the Rectangle class."""
 
 
 class Rectangle:
-    """Rectangle class definition."""
+    """Rectangle class definition, responsible to design
+    the blueprint of it's generation"""
 
     def __init__(self, width=0, height=0):
         """Rectangle class initialization.
