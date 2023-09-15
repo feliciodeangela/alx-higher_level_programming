@@ -11,10 +11,10 @@ class Rectangle:
 
         Args:
             width (int): Represents the Rectangle's width.
-            height (int): Represents the Rectangle's heigth."""
+            height (int): Represents the Rectangle's height."""
         if not isinstance(width, int):
             raise TypeError("width must be a number")
-        if not isinstance(heigth, int):
+        if not isinstance(height, int):
             raise TypeError("height must be a number")
         if width < 0:
             raise ValueError("width must be >= 0")
