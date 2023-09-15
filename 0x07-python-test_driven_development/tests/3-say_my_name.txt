@@ -22,14 +22,9 @@ Traceback (most recent call last):
   ...
 TypeError: first_name must be a string
 
->>> nm(None)
+>>> nm()
 Traceback (most recent call last):
   ...
-TypeError: first_name must be a string
-
->>> nm(None, None)
-Traceback (most recent call last):
-  ...
-TypeError: first_name must be a string
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
 """
