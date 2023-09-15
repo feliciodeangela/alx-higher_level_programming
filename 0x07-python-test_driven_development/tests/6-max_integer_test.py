@@ -11,7 +11,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_mx(self):
         self.assertEqual(max_integer([5,2,9,0]), 9)
         self.assertEqual(max_integer([2]), 2)
-        self.assertEqual(max_integer([]), [])
+        self.assertEqual(max_integer([]), None)
 
     def test_vals(self):
         self.assertNotIsInstance(max_integer([3,6]), list)
