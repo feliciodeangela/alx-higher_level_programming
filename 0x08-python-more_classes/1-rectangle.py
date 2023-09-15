@@ -12,14 +12,6 @@ class Rectangle:
         Args:
             width (int): Represents the Rectangle's width.
             height (int): Represents the Rectangle's height."""
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        if height < 0:
-            raise ValueError("height must be >= 0")
         self.width = width
         self.height = height
 
@@ -39,6 +31,10 @@ class Rectangle:
 
         Args:
             value (int): The width's measure."""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @height.setter
@@ -47,4 +43,8 @@ class Rectangle:
 
         Args:
             value (int): The height's measure."""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
