@@ -86,6 +86,6 @@ class Rectangle:
         Rectangle.number_of_instances = self.number_of_instances - 1
 
     @classmethod
-    def new_number_of_instances (cls):
+    def new_number_of_instances(cls):
         """Number of instances updater."""
         return cls.number_of_instances
