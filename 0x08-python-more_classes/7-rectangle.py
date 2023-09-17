@@ -73,14 +73,18 @@ class Rectangle:
         """Rectangle's str() method."""
         if self.width == 0 or self.height == 0:
             return ("")
-        hsh = self.print_symbol * self.width
-        #if isinstance(hsh, str):
-        #    sp = "\n" + hsh
-        #    return ("{}{}".format(hsh, sp * (self.height - 1)))
-        #elif isinstance(hsh, list):
-        #    sp = hsh.append(hsh * (self.height -1))
-        #    return ([])
-        return ([])
+        hsh = self.print_symbol
+        if isinstance(hsh, str):
+            sp = "\n" + (hsh * self.width)
+            return ("{}{}".format((hsh * self.width), sp * (self.height - 1)))
+        elif isinstance(hsh, list):
+            hh = []
+            for c in hsh:
+                hh.append(c)
+            if self.height == 1:
+                return (str(hh))
+            hhh = "\n" + (str(hh) * self.width)
+            return ("{}{}".format((str(hh) * self.width), hhh * (self.height -1)))
 
     def __repr__(self):
         """Rectangle's repr() method."""
