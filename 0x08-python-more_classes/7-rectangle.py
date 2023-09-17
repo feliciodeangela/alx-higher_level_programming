@@ -83,8 +83,8 @@ class Rectangle:
                 hh.append(c)
             if self.height == 1:
                 return (str(hh))
-            hhh = "\n" + (str(hh) * self.width)
-            return ("{}{}".format((str(hh) * self.width), hhh * (self.height -1)))
+            h = "\n" + (str(hh) * self.width)
+            return ("{}{}".format(str(hh) * self.width, h * (self.height - 1)))
 
     def __repr__(self):
         """Rectangle's repr() method."""
