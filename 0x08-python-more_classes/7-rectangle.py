@@ -73,7 +73,7 @@ class Rectangle:
         """Rectangle's str() method."""
         if self.width == 0 or self.height == 0:
             return ("")
-        hsh = self.print_symbol
+        hsh = str(self.print_symbol)
         if isinstance(hsh, str):
             sp = "\n" + (hsh * self.width)
             return ("{}{}".format((hsh * self.width), sp * (self.height - 1)))
