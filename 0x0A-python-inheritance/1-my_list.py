@@ -9,4 +9,3 @@ class MyList(list):
         """Function to print a list in ascending order."""
         ll = self.copy()
         print(sorted(ll))
-        return (sorted(ll))
