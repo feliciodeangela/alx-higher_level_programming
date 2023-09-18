@@ -8,7 +8,6 @@ class MyList(list):
     def print_sorted(self):
         """Function to print a list in ascending order."""
         print(sorted(self))
-        return (sorted(self))
 
     def __str__(self):
         """str() method for MyList class."""
