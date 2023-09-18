@@ -21,4 +21,13 @@
 >>> mm.print_sorted()
 []
 
+>>> mll = MyList()
+>>> mll.append(8)
+>>> mll.append(-8)
+>>> mll.append(6)
+>>> mll.append(3)
+>>> mll.append(-1)
+>>> mll.print_sorted()
+[-8, -1, 3, 6, 8]
+
 """
