@@ -1,0 +1,24 @@
+"""
+>>> MyList = __import__('1-my_list').MyList
+>>> ml = MyList()
+>>> ml.append(4)
+>>> ml.append(34)
+>>> ml.append(345)
+>>> ml.append(3)
+>>> ml.append(5)
+>>> ml.print_sorted()
+[3, 4, 5, 34, 345]
+
+>>> ml2 = MyList()
+>>> ml2.append(6)
+>>> ml2.append(4)
+>>> ml2.append(0)
+>>> ml2.append(1)
+>>> ml2.print_sorted()
+[0, 1, 4, 6]
+
+>>> mm = MyList()
+>>> mm.print_sorted()
+[]
+
+"""
