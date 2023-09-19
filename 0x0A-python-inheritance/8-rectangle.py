@@ -2,6 +2,7 @@
 """This module contains the definition of the BaseGeometry class."""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """Rectangle class defitnition."""
 
