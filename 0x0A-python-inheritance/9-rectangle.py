@@ -29,4 +29,4 @@ class Rectangle(BaseGeometry):
 
         Returns:
             The string formated value of the rectangle."""
-        return("[Rectangle] {}/{}".format(self.__width, self.__height))
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
