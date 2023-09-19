@@ -10,4 +10,4 @@ def inherits_from(obj, a_class):
         a_class (class): Class to compare to.
     Return:
         True if it is | False if is not."""
-    return (issubclass(obj, a_class))
+    return (type(obj) != a_class)
