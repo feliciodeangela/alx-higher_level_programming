@@ -4,7 +4,7 @@
 
 class Student:
     """Student clas definition"""
-    
+
     def __init__(self, first_name, last_name, age):
         """Student class contructor
 
@@ -21,4 +21,5 @@ class Student:
 
         Returns:
             The Student's dict()"""
-        return ({'first_name': self.first_name, 'last_name': self.last_name, 'age': self.age})
+        return ({'first_name': self.first_name, \
+                'last_name': self.last_name, 'age': self.age})
