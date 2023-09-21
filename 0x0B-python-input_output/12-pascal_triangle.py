@@ -11,7 +11,7 @@ def pascal_triangle(n):
         List of lists of integers representing the triangle of n"""
     ls = [[1]]
     if n <= 0:
-        return (ls)
+        return ([])
     for i in range(1, n):
         r = [1]
         for j in range(1, i):
