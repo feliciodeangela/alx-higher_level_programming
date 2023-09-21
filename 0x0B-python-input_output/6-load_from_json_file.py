@@ -10,5 +10,5 @@ def load_from_json_file(filename):
         filename (str): File/Directory containing the JSON.
     Returns:
         The object created from the JSON file."""
-    with open(filename, "r+") as fl:
+    with open(filename) as fl:
         return (json.load(fl))
