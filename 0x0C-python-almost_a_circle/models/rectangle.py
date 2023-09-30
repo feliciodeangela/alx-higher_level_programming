@@ -2,6 +2,7 @@
 """This module contains the Rectangle's class definition"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class definition"""
 
@@ -10,8 +11,8 @@ class Rectangle(Base):
         Args:
             width (int): Rectangle's width.
             height (int): Rectangle's height.
-            x (int): 
-            y (int): """
+            x (int):
+            y (int):"""
         self.width = width
         self.height = height
         self.x = x
@@ -26,11 +27,12 @@ class Rectangle(Base):
         """Prints a representation of the instance"""
         c = "#" * self.width
         sp = "\n" + c
-        print("{}{}".format(c, sp * (self.height -1)))
+        print("{}{}".format(c, sp * (self.height - 1)))
 
     def __str__(self):
         """Returns the string representation of the Rectangle"""
-        return ("[Rectangle] ({}) {}/{} {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} {}/{}".format(self.id, self.x, self.y,
+                                                      self.width, self.height))
 
     @property
     def width(self):
