@@ -25,7 +25,8 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a representation of the instance"""
-        c = "#" * self.width
+        cc = " " * self.x
+        c = cc + "#" * self.width
         sp = "\n" + c
         print("{}{}".format(c, sp * (self.height - 1)))
 
