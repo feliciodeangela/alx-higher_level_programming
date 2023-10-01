@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contains the Base class definition."""
-from json import dumps
+from json import dumps, loads
 
 
 class Base:
@@ -36,4 +36,12 @@ class Base:
             if list_objs is None:
                 fl.write('[]')
             else:
-                fl.write(cls.to_json_string([lob.to_dictionary() for lob in list_objs]))
+                fl.write(cls.to_json_string([lob.to_dictionary()
+                                             for lob in list_objs]))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation"""
+        if json_string is None:
+            return ([])
+        return (loads(json_string))
