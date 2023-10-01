@@ -19,11 +19,21 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """Transform string to json obj
         Args:
             list_dictionaries (list): List of dictionaries"""
-        if not list_dictionaries or list_dictionaries is None:
-            return ("[]")
+        if list_dictionaries is None:
+            return ('[]')
         else:
             return (dumps(list_dictionaries))
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Save objects to file"""
+        with open(cls.__name__ + '.json', 'w') as fl:
+            if list_objs is None:
+                fl.write('[]')
+            else:
+                fl.write(cls.to_json_string([lob.to_dictionary() for lob in list_objs]))
