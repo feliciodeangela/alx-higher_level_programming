@@ -23,7 +23,7 @@ class Base:
         """Transform string to json obj
         Args:
             list_dictionaries (list): List of dictionaries"""
-        if list_dictionaries is None:
+        if not list_dictionaries or list_dictionaries is None:
             return ("[]")
         else:
             return (dumps(list_dictionaries))
