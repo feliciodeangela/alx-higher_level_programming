@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This module contains the Base class definition."""
+from json import dumps
 
 
 class Base:
@@ -17,3 +18,12 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """Transform string to json obj
+        Args:
+            list_dictionaries (list): List of dictionaries"""
+        if list_dictionaries is None:
+            return ("[]")
+        else:
+            return (dumps(list_dictionaries))
