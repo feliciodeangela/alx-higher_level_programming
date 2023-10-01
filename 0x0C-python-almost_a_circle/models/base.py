@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module contains the Base class definition."""
 from json import dumps, loads
+import os
 
 
 class Base:
@@ -59,8 +60,10 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Returns a list of all instances"""
-        with open(cls.__name__ + ".json", "r") as fl:
-            readContent = fl.read()
-            toString = cls.from_json_string(readContent)
-            return (cls.create(**ob) for ob in toString)
-        return ([])
+        if os.path.exists(cls.__name__ + ".json"):
+            with open(cls.__name__ + ".json", "r") as fl:
+                readContent = fl.read()
+                toString = cls.from_json_string(readContent)
+        else:
+            return ([])
+        return ([cls.create(**ob) for ob in toString])
