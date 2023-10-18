@@ -1,2 +1,2 @@
 -- List records from a table
-SELECT score, name FROM second_table GROUP BY name ORDER BY score DESC; 
+SELECT score, name FROM second_table where name IS NOT NULL ORDER BY score DESC; 
