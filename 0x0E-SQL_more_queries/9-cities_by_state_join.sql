@@ -1,2 +1,2 @@
 -- Select from multiple tables
-SELECT cities.id, cities.name, states.name ORDER BY cities.id;
+SELECT cities.id, cities.name, states.name FROM cities, states ORDER BY cities.id;
