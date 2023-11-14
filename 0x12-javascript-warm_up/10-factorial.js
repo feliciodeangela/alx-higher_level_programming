@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function fact(a) {
+function fact (a) {
   if (a < 2 | isNaN(a)) {
     return (1);
   } else {
