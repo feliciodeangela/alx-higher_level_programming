@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function fact(a) {
-  if (a < 2) {
+  if (a < 2 | isNaN(a)) {
     return (1);
   } else {
     const ag = a * fact(a - 1);
