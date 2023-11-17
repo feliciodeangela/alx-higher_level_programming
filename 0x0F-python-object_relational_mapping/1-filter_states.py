@@ -4,8 +4,7 @@ import sys
 import MySQLdb
 
 
-"""def dbConnect():"""
-if __name__ == "__main__":
+def dbConnect():
     """Filtered states selection function"""
     link = MySQLdb.connect(
         user=sys.argv[1],
@@ -27,5 +26,5 @@ if __name__ == "__main__":
     link.close()
 
 
-"""if __name__ == "__main__":
-    dbConnect()"""
+if __name__ == "__main__":
+    dbConnect()
