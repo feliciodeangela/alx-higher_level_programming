@@ -13,11 +13,9 @@ def dbConnect():
         host="localhost",
         port=3306
     )
-    search = 'N%'
     exe = link.cursor()
     exe.execute(
-            "SELECT * FROM states WHERE name LIKE %s ORDER BY id",
-            (search,)
+            "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id",
     )
     result = exe.fetchall()
     for res in result:
