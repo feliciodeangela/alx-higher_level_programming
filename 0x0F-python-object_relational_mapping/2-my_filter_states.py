@@ -15,7 +15,9 @@ def dbConnect():
     )
     search = str(sys.argv[4])
     exe = link.cursor()
-    exe.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY id".format(search))
+    exe.execute(
+        "SELECT * FROM states WHERE name LIKE '{}' ORDER BY id".format(search)
+    )
     link.commit()
     result = exe.fetchall()
     for res in result:
