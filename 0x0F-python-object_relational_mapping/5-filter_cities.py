@@ -25,6 +25,8 @@ def dbConnect():
     )
     link.commit()
     result = exe.fetchall()
+    if len(result) == 0:
+        print()
     for i in range(0, len(result)):
         if i < (len(result) - 1):
             print(result[i][0], end=', ')
