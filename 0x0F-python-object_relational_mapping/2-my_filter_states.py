@@ -16,7 +16,9 @@ def dbConnect():
     search = sys.argv[4]
     exe = link.cursor()
     exe.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id".
+        "SELECT * FROM states \
+        WHERE name COLLATE utf8mb4_bin LIKE '{}' \
+        ORDER BY id".
         format(search)
     )
     link.commit()

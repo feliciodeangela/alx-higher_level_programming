@@ -15,7 +15,9 @@ def dbConnect():
     )
     exe = link.cursor()
     exe.execute(
-            "SELECT * FROM states WHERE BINARY LEFT(name, 1)='N' ORDER BY id",
+            "SELECT * FROM states \
+            WHERE name COLLATE utf8mb4_bin LIKE'N%' \
+            ORDER BY id",
     )
     result = exe.fetchall()
     for res in result:
