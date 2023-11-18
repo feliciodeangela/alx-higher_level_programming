@@ -17,7 +17,7 @@ def dbConnect():
     exe = link.cursor()
     exe.execute(
         "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id".
-        format(search).strip("'")
+        format(search)
     )
     link.commit()
     result = exe.fetchall()
