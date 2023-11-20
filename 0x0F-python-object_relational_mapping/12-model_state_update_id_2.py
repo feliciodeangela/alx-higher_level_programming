@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Script that changes the name of a State object from the database"""
 from sys import argv
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, update
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
@@ -21,10 +21,13 @@ def dbConnect():
     link = Session()
     stateID = 2
     newState = "New Mexico"
-    toUpdate = link.query(State).filter(State.id == stateID).update(
-        {State.name: newState},
-        synchronize_session=False
+    logic = (
+        update(State).
+        where(State.id == stateID).
+        values(name=newState)
     )
+    link.execute(logic)
+    link.commit()
 
 
 if __name__ == "__main__":
