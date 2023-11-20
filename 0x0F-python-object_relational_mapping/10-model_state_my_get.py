@@ -22,7 +22,8 @@ def dbConnect():
     Session = sessionmaker(bind=engine)
     link = Session()
     result = link.query(State).filter(State.name.like("{}".format(search)))
-    if result:
+    stateID = 0
+    if result.first():
         for res in result:
             print("{}".format(res.id))
     else:
