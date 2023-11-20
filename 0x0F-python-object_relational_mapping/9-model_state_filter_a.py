@@ -21,7 +21,8 @@ def dbConnect():
     Session = sessionmaker(bind=engine)
     link = Session()
     search = 'a'
-    result = link.query(State).filter(State.name.like("%{}%".format(search))).order_by(State.id)
+    result = link.query(State).filter(State.name.like("%{}%".format(search)))\
+        .order_by(State.id)
     for res in result:
         print("{}: {}".format(res.id, res.name))
 
