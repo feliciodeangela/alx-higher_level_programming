@@ -3,7 +3,7 @@
 from sys import argv
 from sqlalchemy import create_engine
 from model_state import Base, State
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import Session, sessionmaker
 
 
 def dbConnect():

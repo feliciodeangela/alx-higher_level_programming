@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that lists all State objects that contain the letter a from \
+"""Script that lists all State objects that contain the letter a from 
 the database"""
 from sys import argv
 from sqlalchemy import create_engine
@@ -21,8 +21,7 @@ def dbConnect():
     Session = sessionmaker(bind=engine)
     link = Session()
     search = 'a'
-    result = link.query(State).filter(State.name.like("%{}%".format(search)))
-    .order_by(State.id)
+    result = link.query(State).filter(State.name.like("%{}%".format(search))).order_by(State.id)
     for res in result:
         print("{}: {}".format(res.id, res.name))
 
