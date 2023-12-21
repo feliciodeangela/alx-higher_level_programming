@@ -1,3 +1,3 @@
 #!/bin/bash
 # Using variables
-curl -s "$1" --variable X-School-User-Id=98
+curl -sH "X-School-User-Id: 98" "$1"
