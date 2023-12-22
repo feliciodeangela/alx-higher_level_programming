@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Module for url fetch"""
-import urllib.request
+from urllib import request
 
 
 if __name__ == "__main__":
-    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
+    with request.urlopen("https://alx-intranet.hbtn.io/status") as response:
         res = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(res)))
