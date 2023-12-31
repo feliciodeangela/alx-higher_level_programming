@@ -10,4 +10,4 @@ if __name__ == "__main__":
         resp.raise_for_status()
         print(resp.content.decode("utf8"))
     except requests.exceptions.HTTPError as err:
-        print("Error code: {}".format(err))
+        print("Error code: {}".format(err.resp.status_code))
