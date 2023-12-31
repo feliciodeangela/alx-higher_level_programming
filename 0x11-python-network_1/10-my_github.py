@@ -8,4 +8,4 @@ if __name__ == "__main__":
     url = "https://api.github.com/{}".format(argv[1])
     hdr = {"Authorization": "token {}".format(argv[2])}
     resp = requests.get(url, headers=hdr)
-    print(resp)
+    print(resp.json())
