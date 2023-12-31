@@ -6,7 +6,7 @@ from sys import argv
 
 if __name__ == "__main__":
     le = ""
-    if argv[1]:
+    if len(argv) > 1:
         le = argv[1]
     try:
         res = requests.post("http://0.0.0.0:5000/search_user", data={"q": le})
@@ -16,4 +16,4 @@ if __name__ == "__main__":
     except requests.exceptions.JSONDecodeError as err:
         print("Not a valid JSON")
     else:
-        print("[{}] {}".format(result.id, result.name))
+        print("[{}] {}".format(result, result))
