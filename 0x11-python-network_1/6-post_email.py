@@ -6,4 +6,4 @@ import requests
 
 if __name__ == "__main__":
     resp = requests.post(argv[1], data={'email': argv[2]})
-    print("Your email is: {}".format(resp.content.decode("utf8")))
+    print(resp.content.decode("utf8"))
