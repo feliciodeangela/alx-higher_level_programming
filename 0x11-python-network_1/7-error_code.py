@@ -5,9 +5,8 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    try:
-        resp = requests.get(argv[1])
-        resp.raise_for_status()
+    resp = requests.get(argv[1])
+    if resp.status_code >= 400:
+        print(resp.status_code)
+    else:
         print(resp.content.decode("utf8"))
-    except requests.exceptions.HTTPError as err:
-        print("Error code: {}".format(err.resp.status_code))
