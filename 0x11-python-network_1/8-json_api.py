@@ -5,9 +5,9 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    let = ""
+    le = ""
     if argv[1]:
-        let = argv[1]
+        le = argv[1]
     try:
         res = requests.post("http://0.0.0.0:5000/search_user", data={"q": le})
         result = res.json()
