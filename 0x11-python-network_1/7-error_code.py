@@ -9,4 +9,4 @@ if __name__ == "__main__":
         resp = requests.get(argv[1])
         print(resp.content.decode("utf8"))
     except requests.exceptions.HTTPError as err:
-        print("Error code: {}".format(err.code))
+        print("Error code: {}".format(err))
